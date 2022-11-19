@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color:  #fff;
+            
+            font-family: 14px/normal 'Roboto',Helvetica,Sans-Serif;
+            font-weight: 20;
+            
+
+            
+        }
+        .main
+        {
+            background-color:  black;
+            height: 90vh;
+            width:810px;
+            position: absolute;
+        }
+        .s1
+        {
+            font-size: 15px;
+            background-color:  black;
+            border: 1px solid  #fff;
+            color: #fff;
+            margin-top:55px;
+            margin-left: 50px;
+            border-radius: none;
+            padding-top:7px;
+            padding-bottom: 7px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .p1
+        {
+            color: #fff;
+            padding-top: 55px;
+            padding-left: 35px;
+        }
+        .b1
+        {
+            border-radius: 10px;
+            background-color: transparent;
+           
+            color: #fff;
+          
+            padding-top: 10px;
+            padding-left: 40px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+           
+
+        }
+        .s2
+        {
+            padding-left: 40px;
+        }
+        .d1
+        {
+            padding-top: 25px;
+           
+            justify-content: left;
+            align-items: left;
+        }
+        .d1.b1{
+            border:1px solid  #fff;
+        }
+        .d2
+        {
+            margin-top: 20px;
+        }
+        .b2
+        {
+            border-radius: none;
+            background-color:  #fff;
+            font-size: 20px;
+            border: 1px solid black;
+            margin-left: 45px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .b1{
+            border: 1px solid  #fff;
+            margin-left: 45px;
+        }
+        #error
+        {
+            margin-top: 1px;
+            color:red;
+        }
+       
+        
+        
+        
+    </style>
+    <script>
+        function click()
+        {
+           let input=document.getElementById("list").innerHTML;
+           let error=document.getElementById("error").innerHTML;
+           if(input='')
+           {
+           error=("please select any profession");
+           }
+           console.log("error");
+
+            
+        }
+        const arr=[18, 20, 19]
+        const newarr=arr.map(arritem=>{
+            return parseInt(arritem);
+        
+
+        })
+        console.log(newarr);
+        let obj = {
+            name:"john", 
+            age: 18
+    
+             
+
+        }
+        Object.keys(obj).forEach((item)=>{
+            if(typeof obj[item]=="number")
+            {
+                obj[item]=19;
+
+            }
+        })
+        console.log(obj);
+        const obj1={
+            Name: "john" ,age:18,
+            Name: "jack" , age:20,
+            Name: "karen", age:19
+            
+        }
+        const obj2={
+           
+            type:"car",model:"maruti",
+            Name:"samantha",age:5,
+        }
+        const newobj={...obj1, ...obj2}
+        console.log(newobj);
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <p class="p1">filter ui cards via their profession.</p>
+      
+          <select id="list" class="s1">
+            <option value="profession" class="s2" id="prof">profession</option>
+            <option value="developer">developer</option>
+            <option value="admin">admin</option>
+          </select>
+          <div class="d1">
+          <button class="b1">1. Name:john  &nbsp; &nbsp;  &nbsp;&nbsp; profession:Developer &nbsp;&nbsp; &nbsp;&nbsp; age:18</button><br><br>
+          <button class="b1">2. Name:jack  &nbsp;&nbsp;  &nbsp;&nbsp;  profession:Developer &nbsp;&nbsp; &nbsp;&nbsp;  age:20</button><br><br>
+          <button class="b1">3. Name:karen &nbsp;&nbsp; &nbsp;&nbsp;  profession: Admin     &nbsp;&nbsp; &nbsp;&nbsp;    age:19</button>
+        </div>
+        <div class="d2">
+            <button class="b2" onclick="click()">Filter</button>
+        </div>
+        <span id="error"></span>
+
+        </div>
+    </div>
+    
+</body>
+</html>
